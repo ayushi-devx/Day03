@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:80px auto;
+            border: 1px solid black;
+            width: 420px;
+            text-align: center;
+            background-color: azure;
+
+        }
+        #quotes{
+            margin-left: 9px;
+            border:2px dashed rgb(143, 143, 169);
+            background-color: rgb(179, 179, 235);
+            padding:5px;
+
+            width: 380px;
+            margin-bottom: 8px ;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div > 
+        <h2 id="h2">Quote Generator</h2>
+        <div id="quotes" ></div>
+    </div>
+   
+    <script>
+    var quote=["Success is not final, failure is not fatal: It is the courage to continue that counts.","Don’t watch the clock; do what it does. Keep going.",
+            "Success usually comes to those who are too busy to be looking for it.","There are no secrets to success. It is the result of preparation, hard work, and learning from failure.",
+            "Success is walking from failure to failure with no loss of enthusiasm.","The road to success and the road to failure are almost exactly the same.",
+            "Opportunities don't happen. You create them.","Success is not how high you have climbed, but how you make a positive difference to the world.","The only place where success comes before work is in the dictionary.",
+            "Don’t be afraid to give up the good to go for the great."
+        ]
+
+        function generateQuote(){
+            var quotes=document.querySelector("#quotes");
+            var index=Math.floor(Math.random()*quote.length);
+            quotes.textContent=quote[index];
+            setTimeout(generateQuote,3000);
+
+        }
+        generateQuote();
+
+
+    </script>
+</body>
+</html>
