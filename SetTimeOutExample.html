@@ -1,0 +1,101 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+
+
+    <script>
+        
+        function abc()
+        {
+             var p = new Date
+            console.log(p, 'Hello & namaste')
+            document.querySelector('div').innerHTML = p;
+        
+            setTimeout(abc, 300)
+        }
+        abc();
+        
+    </script>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            margin: 110px auto;
+           margin-left: 250px;
+           font-size: 60px;
+           color:#06312a;
+           border:2px dashed #043128;
+           width: 300px;
+            
+        }
+    </style>
+</head>
+<body style="background-color: #2fd0b3">
+    <p>
+
+    </p>
+    
+    <script>
+        // p=1;
+        // function abc(){
+         
+        //     console.log(p,"hello");
+        //       setTimeout(abc,2000);
+        //     p++;
+        // }
+        // abc();
+
+        // function time(){
+        //     var date=new Date;
+        //     document.querySelector("p").innerHTML=date;
+        //     setTimeout(time,1000);
+        // }
+        // time();
+
+        // function clock(){
+        //     var date=new Date();
+        //     // console.log(date.getDay());
+        //   var p= document.querySelector("p");
+        //   p.innerHTML=date.getDate();
+        //   p.innerHTML=date.getFullYear();
+        //   p.innerHTML=date.toDateString();
+        // //   p.innerHTML=date.getTime();
+        // // p.innerHTML=date.setMonth("june",5);
+            
+
+        // }
+        // clock();
+        function digitalClock(){
+            var date=new Date;
+           var p= document.querySelector("p");
+           p.innerHTML=date.toLocaleTimeString();
+           setTimeout(digitalClock,1000);
+        }
+        digitalClock();
+        
+    
+
+
+
+
+
+
+    </script>
+</body>
+</html>
